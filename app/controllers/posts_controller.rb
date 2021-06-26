@@ -9,7 +9,7 @@ class PostsController < ApplicationController
     
     def create
         post = Post.new(post_params)
-            post.content = post.content.gsub! 'spoiler', ''
+            post.content = post.content.gsub("spoiler", "")
         post.save
 
         redirect_to root_path
